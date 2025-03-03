@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>~*~* Welcome to My Vaporwave Zone *~*~</title>
+  <style>
+    body {
+      background-color: #000033;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 0h50v50H0zm50 50h50v50H50z' fill='%23ff00ff' fill-opacity='0.05'/%3E%3C/svg%3E");
+      color: #ff00ff;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23ff00ff' fill-opacity='0.7'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%2300ffff' fill-opacity='0.7'/%3E%3C/svg%3E"), auto;
+    }
+    
+    .container {
+      width: 780px;
+      margin: 0 auto;
+      border: 4px solid #00ffff;
+      background-color: rgba(0, 0, 51, 0.7);
+      box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+    }
+    
+    .header {
+      text-align: center;
+      background: linear-gradient(to right, #ff00ff, #00ffff);
+      padding: 10px;
+      border-bottom: 3px dashed white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 0 L50 50 L100 0 L50 -50 Z' fill='white' fill-opacity='0.1'/%3E%3C/svg%3E");
+      background-size: 40px 40px;
+      z-index: 0;
+    }
+    
+    .header h1 {
+      color: white;
+      text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff;
+      font-size: 36px;
+      margin: 10px 0;
+      animation: rainbow 3s infinite;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .motto {
+      font-style: italic;
+      color: yellow;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px black;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .navigation {
+      background-color: #000066;
+      text-align: center;
+      padding: 5px;
+      border-top: 2px solid #00ffff;
+      border-bottom: 2px solid #00ffff;
+      margin-bottom: 5px;
+    }
+    
+    .navigation a {
+      display: inline-block;
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 3px 10px;
+      border: 1px solid #ff00ff;
+      background-color: #000033;
+    }
+    
+    .navigation a:hover {
+      background-color: #ff00ff;
+      color: white;
+      transform: rotate(-2deg);
+    }
+    
+    .main {
+      display: table;
+      width: 100%;
+    }
+    
+    .content {
+      display: table-cell;
+      padding: 15px;
+      width: 70%;
+      vertical-align: top;
+    }
+    
+    .sidebar {
+      display: table-cell;
+      width: 30%;
+      background-color: rgba(0, 0, 102, 0.5);
+      border-left: 2px dashed #00ffff;
+      padding: 10px;
+      vertical-align: top;
+    }
+    
+    .welcome {
+      font-size: 24px;
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0 #ff00ff;
+    }
+    
+    .under-construction {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+      border: 2px dashed yellow;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .under-construction img {
+      animation: rotate 3s infinite linear;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      margin: 0 10px;
+    }
+    
+    .counter {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    
+    .counter-number {
+      background-color: black;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      padding: 3px 6px;
+      border: 1px solid #00ffff;
+      letter-spacing: 2px;
+    }
+    
+    .guestbook {
+      margin: 20px 0;
+      border: 1px dotted #00ffff;
+      padding: 10px;
+      background-color: rgba(0, 0, 51, 0.5);
+    }
+    
+    .webring {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+      border-top: 1px solid #ff00ff;
+      border-bottom: 1px solid #ff00ff;
+    }
+    
+    .webring img {
+      margin: 0 5px;
+      border: 1px solid white;
+      background-color: #ff00ff;
+      width: 88px;
+      height: 31px;
+    }
+    
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      border-top: 3px dashed #00ffff;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+    
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+      padding: 5px;
+      background-color: black;
+      border: 1px solid #00ffff;
+      margin: 10px 0;
+      color: #00ff00;
+    }
+    
+    table.about {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    table.about td {
+      padding: 10px;
+      border: 1px solid #ff00ff;
+    }
+    
+    table.about tr:nth-child(odd) {
+      background-color: rgba(255, 0, 255, 0.1);
+    }
+    
+    table.about tr:nth-child(even) {
+      background-color: rgba(0, 255, 255, 0.1);
+    }
+    
+    .hit-counter {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    
+    .counter-digit {
+      display: inline-block;
+      background-color: black;
+      color: lime;
+      padding: 2px 5px;
+      border: 1px solid #00ffff;
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+      margin: 0 1px;
+    }
+    
+    @keyframes rainbow {
+      0% { color: #ff00ff; }
+      20% { color: #ff0000; }
+      40% { color: #ffff00; }
+      60% { color: #00ff00; }
+      80% { color: #00ffff; }
+      100% { color: #ff00ff; }
+    }
+    
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    @keyframes marquee {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .midi-player {
+      text-align: center;
+      margin: 15px 0;
+      padding: 5px;
+      border: 1px solid #ff00ff;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .cool-links {
+      margin: 15px 0;
+    }
+    
+    .cool-links h3 {
+      color: #00ffff;
+      text-shadow: 1px 1px #ff00ff;
+      text-align: center;
+      border-bottom: 1px dotted #ff00ff;
+    }
+    
+    .cool-links ul {
+      list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23ff00ff'/%3E%3C/svg%3E");
+      padding-left: 25px;
+    }
+    
+    .cool-links a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    
+    .cool-links a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+    .cloud-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .old-school-button {
+      display: inline-block;
+      padding: 5px 10px;
+      background: linear-gradient(to bottom, #fff, #ccc);
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #888;
+      border-bottom: 2px solid #888;
+      color: #000;
+      text-decoration: none;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      margin: 5px;
+    }
+    
+    .old-school-button:active {
+      border-top: 2px solid #888;
+      border-left: 2px solid #888;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
+    
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .polaroid {
+      background: white;
+      padding: 10px 10px 20px 10px;
+      margin: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
+      width: 150px;
+    }
+    
+    .polaroid:nth-child(even) {
+      transform: rotate(3deg);
+    }
+    
+    .polaroid:hover {
+      transform: scale(1.1) rotate(0);
+      z-index: 10;
+    }
+    
+    .polaroid-img {
+      width: 100%;
+      height: 120px;
+      background-color: #ff00ff;
+      background-image: linear-gradient(45deg, #ff00ff 25%, #00ffff 25%, #00ffff 50%, #ff00ff 50%, #ff00ff 75%, #00ffff 75%, #00ffff 100%);
+      background-size: 20px 20px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .polaroid-caption {
+      text-align: center;
+      color: #000;
+      font-family: "Comic Sans MS", cursive;
+      font-size: 12px;
+    }
+    
+    .download-section {
+      margin: 20px 0;
+      padding: 10px;
+      border: 2px solid #00ffff;
+      background-color: rgba(0, 0, 51, 0.7);
+    }
+    
+    .download-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      padding: 5px;
+      border: 1px dotted #ff00ff;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .download-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #00ffff;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: black;
+    }
+    
+    .download-info {
+      flex-grow: 1;
+    }
+    
+    .download-title {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+    
+    .download-desc {
+      color: #00ffff;
+      font-size: 12px;
+    }
+    
+    .download-button {
+      margin-left: 10px;
+    }
+    
+    .windows-dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #c0c0c0;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      width: 300px;
+      color: black;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+      display: none;
+    }
+    
+    .windows-title-bar {
+      background: linear-gradient(to right, #000080, #1084d0);
+      color: white;
+      padding: 3px 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .windows-close {
+      background: #c0c0c0;
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      color: black;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      cursor: pointer;
+    }
+    
+    .windows-content {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .windows-buttons {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    
+    .popup-button {
+      margin: 0 5px;
+      padding: 3px 10px;
+      background: #c0c0c0;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      cursor: pointer;
+    }
+    
+    .grid-background {
+      position: relative;
+    }
+    
+    .grid-background::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, #ff00ff 1px, transparent 1px),
+                        linear-gradient(to bottom, #ff00ff 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .retro-computer {
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .computer-screen {
+      width: 200px;
+      height: 150px;
+      background-color: #000;
+      border: 10px solid #888;
+      border-radius: 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .screen-content {
+      height: 100%;
+      background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3) 50%);
+      background-size: 100% 4px;
+      padding: 10px;
+      font-family: 'Courier New', monospace;
+      color: #0f0;
+      text-shadow: 0 0 2px #0f0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: scan 8s linear infinite;
+    }
+    
+    @keyframes scan {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 100px; }
+    }
+    
+    .computer-keyboard {
+      width: 240px;
+      height: 30px;
+      background-color: #aaa;
+      margin: 5px auto;
+      border-radius: 5px;
+      border-top: 1px solid #888;
+      border-bottom: 3px solid #666;
+    }
+    
+    .guestbook-entries {
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px dashed #00ffff;
+    }
+    
+    .guestbook-entry {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #333;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    
+    .entry-name {
+      color: #ff00ff;
+      font-weight: bold;
+    }
+    
+    .entry-date {
+      color: #00ffff;
+    }
+    
+    .entry-message {
+      font-size: 12px;
+      color: #ffcc00;
+    }
+    
+    .blog-section {
+      margin: 20px 0;
+    }
+    
+    .blog-post {
+      margin: 15px 0;
+      padding: 10px;
+      border: 1px solid #ff00ff;
+      background-color: rgba(0, 0, 51, 0.5);
+    }
+    
+    .post-title {
+      color: #00ffff;
+      font-weight: bold;
+      margin-bottom: 5px;
+      border-bottom: 1px dashed #ff00ff;
+      padding-bottom: 3px;
+    }
+    
+    .post-date {
+      color: #ff00ff;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .post-content {
+      color: #ffcc00;
+    }
+    
+    .vaporwave-elements {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    
+    .vapor-element {
+      text-align: center;
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .vapor-element:nth-child(2) {
+      animation-delay: 1s;
+    }
+    
+    .vapor-element:nth-child(3) {
+      animation-delay: 2s;
+    }
+    
+    .palm-tree {
+      width: 60px;
+      height: 80px;
+      position: relative;
+      margin: 0 auto;
+    }
+    
+    .palm-trunk {
+      width: 10px;
+      height: 50px;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .palm-leaves {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .palm-leaf {
+      width: 40px;
+      height: 10px;
+      background-color: #00ffff;
+      position: absolute;
+      border-radius: 50% 50% 50% 0;
+    }
+    
+    .leaf1 { transform: rotate(-30deg); top: 0; left: -30px; }
+    .leaf2 { transform: rotate(30deg); top: 0; left: 0; }
+    .leaf3 { transform: rotate(-60deg); top: 10px; left: -40px; }
+    .leaf4 { transform: rotate(60deg); top: 10px; left: 10px; }
+    
+    .statue {
+      width: 40px;
+      height: 80px;
+      background-color: white;
+      position: relative;
+      margin: 0 auto;
+      clip-path: polygon(30% 0%, 70% 0%, 70% 20%, 90% 20%, 90% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 10% 70%, 10% 20%, 30% 20%);
+    }
+    
+    .grid-element {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      position: relative;
+      margin: 0 auto;
+    }
+    
+    .grid-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.3) 1px, transparent 1px);
+      background-size: 10px 10px;
+    }
+    
+    .banner-ads {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 15px 0;
+    }
+    
+    .banner-ad {
+      width: 468px;
+      height: 60px;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px black;
+      animation: pulse 2s infinite;
+    }
+
+    .win95-window {
+      background-color: #c0c0c0;
+      border: 2px solid;
+      border-color: #dfdfdf #000 #000 #dfdfdf;
+      width: 90%;
+      margin: 20px auto;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      color: black;
+      font-size: 12px;
+    }
+
+    .win95-title {
+      background: linear-gradient(to right, #000080, #1084d0);
+      color: white;
+      font-weight: bold;
+      padding: 3px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .win95-button {
+      height: 16px;
+      width: 16px;
+      background-color: #c0c0c0;
+      border: 1px solid;
+      border-color: #fff #000 #000 #fff;
+      text-align: center;
+      line-height: 14px;
+    }
+
+    .win95-body {
+      padding: 10px;
+    }
+
+    .win95-menu {
+      display: flex;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #fff;
+    }
+
+    .win95-menu-item {
+      padding: 3px 6px;
+      position: relative;
+    }
+
+    .win95-menu-item:hover {
+      background-color: #000080;
+      color: white;
+    }
+
+    .menu-underline {
+      text-decoration: underline;
+    }
+
+    .win95-statusbar {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #dfdfdf;
+      padding: 3px;
+      margin-top: 10px;
+    }
+
+    .win95-editor {
+      width: 100%;
+      height: 120px;
+      border: 1px solid;
+      border-color: #000 #fff #fff #000;
+      background-color: white;
+      padding: 3px;
+      margin: 5px 0;
+      font-family: "Courier New", monospace;
+      color: black;
+    }
+    
+    .win95-scrollbar {
+      width: 16px;
+      background-color: #c0c0c0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-left: 1px solid #000;
+    }
+
+    .startbar {
+      background-color: #c0c0c0;
+      border-top: 2px solid #dfdfdf;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .start-button {
+      background-color: #c0c0c0;
+      border: 2px solid;
+      border-color: #dfdfdf #000 #000 #dfdfdf;
+      padding: 2px 5px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .start-icon {
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(to right, red, yellow, green, blue);
+      margin-right: 5px;
+    }
+
+    .taskbar-item {
+      background-color: #c0c0c0;
+      border: 2px solid;
+      border-color: #dfdfdf #000 #000 #dfdfdf;
+      padding: 2px 5px;
+      margin-left: 5px;
+      min-width: 100px;
+    }
+
+    .clock-area {
+      margin-left: auto;
+      border: 1px solid;
+      border-color: #000 #dfdfdf #dfdfdf #000;
+      padding: 2px 5px;
+      background-color: #c0c0c0;
+    }
+    
+    .animated-gif {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+    }
+    
+    .fake-gif {
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      background-image: 
+        radial-gradient(#ff00ff 20%, transparent 20%),
+        radial-gradient(#00ffff 20%, transparent 20%);
+      background-position: 0 0, 10px 10px;
+      background-size: 20px 20px;
+      animation: move-bg 2s linear infinite;
+    }
+    
+    @keyframes move-bg {
+      from { background-position: 0 0, 10px 10px; }
+      to { background-position: 20px 0, 30px 10px; }
+    }
+    
+    .neon-text {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ff00ff,
+        0 0 82px #ff00ff,
+        0 0 92px #ff00ff,
+        0 0 102px #ff00ff,
+        0 0 151px #ff00ff;
+      animation: neon-flicker 3s infinite alternate;
+    }
+    
+    @keyframes neon-flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #ff00ff,
+          0 0 82px #ff00ff,
+          0 0 92px #ff00ff,
+          0 0 102px #ff00ff,
+          0 0 151px #ff00ff;
+      }
+      20%, 24%, 55% {        
+        text-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>~*~ VAPORWAVE ZONE ~*~</h1>
+    <div class="motto">// e s t. 2 0 0 1 //</div>
+  </div>
+  
+  <div class="marquee">
+    Welcome to my homepage! Please sign my guestbook! Best viewed in Netscape Navigator 4.0 or Internet Explorer A E S T H E T I C. Optimized for 800x600 resolution! No popups! 100% Y2K compliant!
+  </div>
+  
+  <div class="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#blog">My Blog</a>
+    <a href="#photos">Photos</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#links">Cool Links</a>
+    <a href="#guestbook">Guestbook</a>
+    <a href="#contact">Contact</a>
+  </div>
+  
+  <div class="main">
+    <div class="content">
+      <div class="welcome">
+        <span class="blink">★</span> Welcome to my cyberspace! <span class="blink">★</span>
+      </div>
+      
+      <div class="under-construction">
+        <div class="img"></div>
+        <span style="color: yellow; font-weight: bold;">UNDER CONSTRUCTION</span>
+        <div class="img"></div>
+      </div>
+      
+      <p>
+        Thanks for visiting my little corner of the internet! This page is dedicated to all things ａｅｓｔｈｅｔｉｃ and early 2000s web nostalgia.
+      </p>
+      
+      <div class="neon-text">VAPOR VIBES</div>
+      
+      <div class="vaporwave-elements">
+        <div class="vapor-element">
+          <div class="palm-tree">
+            <div class="palm-trunk"></div>
+            <div class="palm-leaves">
+              <div class="palm-leaf leaf1"></div>
+              <div class="palm-leaf leaf2"></div>
+              <div class="palm-leaf leaf3"></div>
+              <div class="palm-leaf leaf4"></div>
+            </div>
+          </div>
+          <div style="color: #00ffff; margin-top: 5px;">Palm</div>
+        </div>
+        
+        <div class="vapor-element">
+          <div class="statue"></div>
+          <div style="color: #00ffff; margin-top: 5px;">Statue</div>
+        </div>
+        
+        <div class="vapor-element">
+          <div class="grid-element">
+            <div class="grid-lines"></div>
+          </div>
+          <div style="color: #00ffff; margin-top: 5px;">Grid</div>
+        </div>
+      </div>
+      
+      <h2 id="about" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">About Me</h2>
+      
+      <table class="about">
+        <tr>
+          <td width="30%"><strong>Name:</strong></td>
+          <td>XxVaporKidxX</td>
+        </tr>
+        <tr>
+          <td><strong>Age:</strong></td>
+          <td>Old enough to remember dial-up</td>
+        </tr>
+        <tr>
+          <td><strong>Location:</strong></td>
+          <td>The Digital Plaza</td>
+        </tr>
+        <tr>
+          <td><strong>Interests:</strong></td>
+          <td>Web design, Windows 98, Vaporwave music, ASCII art, Old computers</td>
+        </tr>
+        <tr>
+          <td><strong>Favorite Quote:</strong></td>
+          <td><marquee scrollamount="3" width="200">"All that is solid melts into air..." - Karl Marx</marquee></td>
+        </tr>
+        <tr>
+          <td><strong>Website Version:</strong></td>
+          <td>v1.0.4 beta</td>
+        </tr>
+      </table>
+      
+      <div class="retro-computer">
+        <div class="computer-screen">
+          <div class="screen-content">
+            C:\\&gt; DIR /W<br>
+            VAPOR~1.EXE AESTHET~1.SYS<br>
+            WINDOWS.OLD CYBER~1.DLL<br>
+            C:\\&gt; RUN VAPOR~1.EXE<br>
+            <span class="blink">_</span>
+          </div>
+        </div>
+        <div class="computer-keyboard"></div>
+      </div>
+      
+      <p>
+        I started making websites back when Geocities was still cool. This site is a tribute to the golden age of the internet, when websites were personal and full of personality!
+      </p>
+      
+      <div class="win95-window">
+        <div class="win95-title">
+          <div>notepad.exe - README.TXT</div>
+          <div class="win95-button">×</div>
+        </div>
+        <div class="win95-menu">
+          <div class="win95-menu-item"><span class="menu-underline">F</span>ile</div>
+          <div class="win95-menu-item"><span class="menu-underline">E</span>dit</div>
+          <div class="win95-menu-item"><span class="menu-underline">S</span>earch</div>
+          <div class="win95-menu-item"><span class="menu-underline">H</span>elp</div>
+        </div>
+        <div class="win95-body">
+          <div class="win95-editor">
+            Welcome to my Vaporwave Zone!
+            
+            This website is best viewed at 800x600
+            resolution with 16-bit color.
+            
+            Please sign my guestbook before leaving.
+            
+            Last updated: 03/03/2025
+          </div>
+        </div>
+        <div class="win95-statusbar">
+          <div>Ln 5, Col 15</div>
+        </div>
+      </div>
+      
+      <h2 id="blog" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">My NetLogs</h2>
+      
+      <div class="blog-section">
+        <div class="blog-post">
+          <div class="post-title">Discovered a New Vaporwave Album</div>
+          <div class="post-date">Posted: 02/28/2025</div>
+          <div class="post-content">
+            So I just found this amazing album called "Digital Plaza 95" by SynthDreams420. The slowed-down samples are totally ａｅｓｔｈｅｔｉｃ and bring me back to the mall in 1995. Check it out if you're into that nostalgic feel!
+          </div>
+        </div>
+        
+        <div class="blog-post">
+          <div class="post-title">My Windows 98 Setup</div>
+          <div class="post-date">Posted: 02/15/2025</div>
+          <div class="post-content">
+            Just got my old Pentium II computer running with Windows 98 again! I've installed ICQ, WinAmp, and all the classics. It's so satisfying to hear that dial-up connection sound again, even though I'm not actually using dial-up anymore lol. Next step is to install some vintage games!
+          </div>
+        </div>
+      </div>
+      
+      <h2 id="photos" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">Photo Gallery</h2>
+      
+      <div class="photo-gallery">
+        <div class="polaroid">
+          <div class="polaroid-img">IMAGE 1</div>
+          <div class="polaroid-caption">Mall Fountain 1995</div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-img">IMAGE 2</div>
+          <div class="polaroid-caption">My Windows Setup</div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-img">IMAGE 3</div>
+          <div class="polaroid-caption">Sunset.jpg</div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-img">IMAGE 4</div>
+          <div class="polaroid-caption">Retro Computer</div>
+        </div>
+      </div>
+      
+      <div class="midi-player">
+        <strong style="color: #00ffff;">Now Playing: </strong>
+        <span style="color: #ffcc00;">vaporwave_aesthetic.midi</span>
+        <div class="animated-gif">
+          <div class="fake-gif"></div>
+        </div>
+        <div style="margin-top: 5px;">
+          <button class="old-school-button">▶ Play</button>
+          <button class="old-school-button">⏸ Pause</button>
+          <button class="old-school-button">⏹ Stop</button>
+        </div>
+      </div>
+      
+      <h2 id="downloads" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">Cool Downloads</h2>
+      
+      <div class="download-section">
+        <div class="download-item">
+          <div class="download-icon">.ZIP</div>
+          <div class="download-info">
+            <div class="download-title">Vaporwave Wallpapers Pack</div>
+            <div class="download-desc">10 HD wallpapers with palm trees, grids, and statues. Perfect for your desktop!</div>
+          </div>
+          <button class="old-school-button download-button">Download</button>
+        </div>
+        
+        <div class="download-item">
+          <div class="download-icon">.MID</div>
+          <div class="download-info">
+            <div class="download-title">80s MIDI Collection</div>
+            <div class="download-desc">25 classic 80s tunes in MIDI format for your WinAmp player.</div>
+          </div>
+          <button class="old-school-button download-button">Download</button>
+        </div>
+        
+        <div class="download-item">
+          <div class="download-icon">.EXE</div>
+          <div class="download-info">
+            <div class="download-title">WebTicker v1.2</div>
+            <div class="download-desc">Add cool scrolling text to your website with this easy tool!</div>
+          </div>
+          <button class="old-school-button download-button">Download</button>
+        </div>
+      </div>
+      
+      <div class="banner-ads">
+        <div class="banner-ad">FREE COUNTER SERVICE - SIGN UP NOW!</div>
+      </div>
+    </div>
+    
+    <div class="sidebar">
+      <div class="counter">
+        <div><strong>Visitors:</strong></div>
+        <div class="hit-counter">
+          <div class="counter-digit">0</div>
+          <div class="counter-digit">0</div>
+          <div class="counter-digit">0</div>
+          <div class="counter-digit">0</div>
+          <div class="counter-digit">0</div>
+          <div class="counter-digit">1</div>
+        </div>
+        <div style="font-size: 10px; margin-top: 3px;">since 3/3/2025</div>
+      </div>
+      
+      <div style="text-align: center; margin: 15px 0;">
+        <button class="old-school-button" onclick="showDialog()">Click Me!</button>
+      </div>
+      
+      <div class="cool-links">
+        <h3 id="links">Cool Links</h3>
+        <ul>
+          <li><a href="#">My Favorite GIFs</a></li>
+          <li><a href="#">Vaporwave Music</a></li>
+          <li><a href="#">Old School Games</a></li>
+          <li><a href="#">Web 1.0 Resources</a></li>
+          <li><a href="#">My Friend's Page</a></li>
+          <li><a href="#">Windows 98 Fan Club</a></li>
+          <li><a href="#">Dial-Up Sounds Collection</a></li>
+        </ul>
+      </div>
+      
+      <div class="guestbook">
+        <h3 id="guestbook" style="text-align: center; color: #00ffff;">Sign My Guestbook!</h3>
+        <form style="text-align: center;">
+          <div style="margin: 5px 0;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+          </div>
+          <div style="margin: 5px 0;">
+            <label for="email">Email:</label>
+            <input type="text" id="email" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+          </div>
+          <div style="margin: 5px 0;">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="3" style="width: 100%; background: black; color: #00ffff; border: 1px solid #ff00ff;"></textarea>
+          </div>
+          <button type="button" class="old-school-button">Submit</button>
+        </form>
+        
+        <div class="guestbook-entries">
+          <div class="guestbook-entry">
+            <div class="entry-header">
+              <span class="entry-name">VaporFan2000</span>
+              <span class="entry-date">03/01/2025</span>
+            </div>
+            <div class="entry-message">
+              Cool website! Love the aesthetic. Reminds me of the good old days of the internet!
+            </div>
+          </div>
+          
+          <div class="guestbook-entry">
+            <div class="entry-header">
+              <span class="entry-name">RetroComputing98</span>
+              <span class="entry-date">02/28/2025</span>
+            </div>
+            <div class="entry-message">
+              Awesome site! I've added you to my bookmarks. Check out my page at geocities.com/area51/dimension/7275/
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin: 15px 0;">
+        <div style="color: yellow; margin-bottom: 5px;">My Mood:</div>
+        <div style="font-size: 40px;">
+          ✧･ﾟ: *✧･ﾟ:*
+        </div>
+      </div>
+      
+      <div style="margin: 15px 0; text-align: center;">
+        <div style="color: #00ffff; margin-bottom: 5px;">Current Song:</div>
+        <marquee scrollamount="2" direction="left" width="100%">
+          リサフランク420 / 現代のコンピュー
+        </marquee>
+      </div>
+      
+      <div style="margin: 15px 0; border: 1px dashed #ff00ff; padding: 5px; text-align: center;">
+        <div style="color: #ffcc00;">Weather in Vaporwave Plaza:</div>
+        <div style="font-size: 20px; color: #00ffff; margin-top: 5px;">☀️ 87° F</div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="webring">
+    <div style="margin-bottom: 5px; color: #00ffff;">Part of the Vaporwave Webring:</div>
+    <button class="old-school-button">◀ Previous</button>
+    <button class="old-school-button">⚙ Random</button>
+    <button class="old-school-button">Next ▶</button>
+  </div>
+  
+  <div id="contact" style="text-align: center; padding: 10px; margin: 15px;">
+    <h3 style="color: #00ffff; text-shadow: 1px 1px #ff00ff;">Contact Me</h3>
+    <div style="color: #ffcc00; margin: 5px 0;">
+      <span style="color: #ff00ff;">Email:</span> vaporwave2001@geocities.com
+    </div>
+    <div style="color: #ffcc00; margin: 5px 0;">
+      <span style="color: #ff00ff;">AIM:</span> VaporKid2001
+    </div>
+    <div style="color: #ffcc00; margin: 5px 0;">
+      <span style="color: #ff00ff;">ICQ:</span> 12345678
+    </div>
+    <div style="color: #ffcc00; margin: 5px 0;">
+      <span style="color: #ff00ff;">MSN:</span> vaporwave@hotmail.com
+    </div>
+  </div>
+  
+  <div class="startbar">
+    <div class="start-button">
+      <div class="start-icon"></div>
+      Start
+    </div>
+    <div class="taskbar-item">Netscape Navigator</div>
+    <div class="taskbar-item">WinAmp</div>
+    <div class="clock-area">4:20 PM</div>
+  </div>
+  
+  <div class="footer">
+    <div>© 2001-2025 VaporZone. All rights reserved.</div>
+    <div style="margin-top: 5px;">Made with Microsoft FrontPage • Last updated: 03/03/2025</div>
+    <div style="margin-top: 5px;">
+      <span style="margin: 0 5px;">
+        <a href="#" style="color: white;">Privacy Policy</a>
+      </span>
+      <span style="margin: 0 5px;">
+        |
+      </span>
+      <span style="margin: 0 5px;">
+        <a href="#" style="color: white;">Site Map</a>
+      </span>
+      <span style="margin: 0 5px;">
+        |
+      </span>
+      <span style="margin: 0 5px;">
+        <a href="#" style="color: white;">Best viewed in 800x600</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="windows-dialog" id="popup">
+  <div class="windows-title-bar">
+    <div>Welcome!</div>
+    <div class="windows-close" onclick="closeDialog()">x</div>
+  </div>
+  <div class="windows-content">
+    Thanks for visiting my website!<br>
+    Don't forget to sign my guestbook!<br>
+    <img src="/api/placeholder/32/32" alt="waving hand" />
+  </div>
+  <div class="windows-buttons">
+    <div class="popup-button" onclick="closeDialog()">OK</div>
+  </div>
+</div>
+
+<script>
+  // Simple animation for the hit counter
+  setTimeout(() => {
+    const digits = document.querySelectorAll('.counter-digit');
+    digits[5].textContent = '2';
+  }, 3000);
+  
+  // Show popup dialog
+  function showDialog() {
+    document.getElementById('popup').style.display = 'block';
+  }
+  
+  // Close popup dialog
+  function closeDialog() {
+    document.getElementById('popup').style.display = 'none';
+  }
+  
+  // Auto show popup after 5 seconds
+  setTimeout(showDialog, 5000);
+</script>
+
+</body>
+</html>
