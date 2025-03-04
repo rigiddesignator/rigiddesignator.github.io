@@ -91,9 +91,11 @@
       transform: rotate(-2deg);
     }
     
+    /* Fixed main layout */
     .main {
       display: table;
       width: 100%;
+      table-layout: fixed;
     }
     
     .content {
@@ -110,6 +112,7 @@
       border-left: 2px dashed #00ffff;
       padding: 10px;
       vertical-align: top;
+      box-sizing: border-box;
     }
     
     .welcome {
@@ -908,433 +911,13 @@
       }
     }
 
-    /* NEW RIDICULOUS STYLES */
-    .cursor-trail {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0.7;
-      z-index: 9999;
-    }
-
-    .ie-toolbar {
-      background-color: #c0c0c0;
-      border-bottom: 2px solid #888;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      padding: 0 5px;
-    }
-
-    .ie-button {
-      height: 20px;
-      width: 20px;
-      background-color: #c0c0c0;
-      border: 1px solid;
-      border-color: #fff #000 #000 #fff;
-      margin: 0 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      font-weight: bold;
-    }
-
-    .ie-address {
-      flex-grow: 1;
-      height: 18px;
-      border: 1px solid;
-      border-color: #000 #fff #fff #000;
-      background-color: white;
-      margin: 0 5px;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      font-size: 10px;
-      padding-left: 5px;
-      display: flex;
-      align-items: center;
-      color: #000;
-    }
-
-    .certification-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 15px 0;
-    }
-
-    .badge {
-      width: 88px;
-      height: 31px;
-      background-color: #000;
-      border: 1px solid #fff;
-      margin: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 9px;
-      color: #fff;
-      text-align: center;
-      line-height: 1.2;
-      background: linear-gradient(45deg, #ff00ff, #00ffff);
-    }
-
-    .frames-wrapper {
-      border: 1px solid #00ffff;
-      margin: 10px 0;
-      height: 200px;
-      display: flex;
-    }
-
-    .left-frame {
-      width: 25%;
-      border-right: 1px solid #ff00ff;
-      background-color: rgba(0, 0, 51, 0.8);
-      padding: 5px;
-    }
-
-    .right-frame {
-      width: 75%;
-      padding: 5px;
-    }
-
-    .error-popup {
-      position: fixed;
-      background-color: #c0c0c0;
-      border: 2px solid;
-      border-color: #dfdfdf #000 #000 #dfdfdf;
-      width: 250px;
-      padding: 10px;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      color: black;
-      font-size: 12px;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: float 4s infinite;
-    }
-
-    .error-icon {
-      width: 32px;
-      height: 32px;
-      background-color: #ff0000;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .skills-section {
-      margin: 20px 0;
-      border: 1px solid #ff00ff;
-      padding: 10px;
-      background-color: rgba(0, 0, 51, 0.7);
-    }
-
-    .skill {
-      margin: 5px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    .skill-name {
-      width: 100px;
-      color: #00ffff;
-      font-weight: bold;
-    }
-
-    .skill-bar-container {
-      flex-grow: 1;
-      height: 15px;
-      background-color: #000;
-      border: 1px solid #ff00ff;
-    }
-
-    .skill-bar {
-      height: 100%;
-      background: linear-gradient(to right, #ff00ff, #00ffff);
-    }
-
-    .rotating-text {
-      font-size: 18px;
-      color: #ffcc00;
-      display: inline-block;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
-    }
-
-    .netscape-bar {
-      background-color: #c0c0c0;
-      display: flex;
-      align-items: center;
-      height: 20px;
-      border-bottom: 1px solid #888;
-    }
-
-    .netscape-logo {
-      background: linear-gradient(to right, #000080, #1084d0);
-      color: white;
-      font-weight: bold;
-      padding: 2px 5px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-
-    .netscape-menu {
-      display: flex;
-      height: 100%;
-    }
-
-    .netscape-menu-item {
-      padding: 0 10px;
-      display: flex;
-      align-items: center;
-      border-right: 1px solid #888;
-    }
-
-    .webring-section {
-      margin: 15px 0;
-      border: 1px solid #ff00ff;
-      padding: 10px;
-      background-color: rgba(0, 0, 51, 0.5);
-    }
-
-    .webring-badge {
-      background-color: #000;
-      color: #00ffff;
-      padding: 5px;
-      margin: 5px 0;
-      border: 1px dashed #ff00ff;
-      text-align: center;
-    }
-
-    .visitor-survey {
-      margin: 15px 0;
-      padding: 10px;
-      border: 1px solid #00ffff;
-      background-color: rgba(0, 0, 51, 0.5);
-    }
-
-    .survey-question {
-      color: #ffcc00;
-      margin: 10px 0 5px 0;
-      font-weight: bold;
-    }
-
-    .survey-options {
-      margin-left: 20px;
-    }
-
-    .survey-options select, .survey-options input[type="text"] {
-      background-color: #000;
-      color: #00ffff;
-      border: 1px solid #ff00ff;
-      margin: 5px 0;
-    }
-
-    .award-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 15px 0;
-      padding: 10px;
-      border: 1px dashed #ff00ff;
-      background-color: rgba(0, 0, 51, 0.3);
-    }
-
-    .award {
-      width: 88px;
-      margin: 5px;
-      text-align: center;
-    }
-
-    .award-badge {
-      width: 88px;
-      height: 31px;
-      background-color: #ffcc00;
-      border: 1px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      font-weight: bold;
-      color: #000;
-      margin-bottom: 5px;
-    }
-
-    .award-text {
-      font-size: 9px;
-      color: #00ffff;
-    }
-
-    .chat-box {
-      width: 250px;
-      border: 1px solid #ff00ff;
-      margin: 15px 0;
-      background-color: rgba(0, 0, 51, 0.7);
-    }
-
-    .chat-title {
-      background: linear-gradient(to right, #000080, #1084d0);
-      color: white;
-      padding: 3px;
-      font-weight: bold;
-      font-size: 12px;
-    }
-
-    .chat-messages {
-      height: 100px;
-      overflow-y: auto;
-      padding: 5px;
-      background-color: #000;
-      color: #00ffff;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      font-size: 12px;
-    }
-
-    .chat-input {
-      display: flex;
-      border-top: 1px solid #ff00ff;
-      padding: 5px;
-    }
-
-    .chat-text {
-      flex-grow: 1;
-      background-color: #000;
-      border: 1px solid #00ffff;
-      color: #00ffff;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      font-size: 12px;
-      margin-right: 5px;
-    }
-
-    .chat-send {
-      background-color: #c0c0c0;
-      border: 2px solid;
-      border-color: #dfdfdf #000 #000 #dfdfdf;
-      padding: 2px 5px;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      font-size: 12px;
-    }
-
-    .poll-section {
-      margin: 15px 0;
-      border: 1px solid #ff00ff;
-      padding: 10px;
-      background-color: rgba(0, 0, 51, 0.5);
-    }
-
-    .poll-question {
-      color: #00ffff;
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .poll-option {
-      margin: 5px 0;
-      color: #ffcc00;
-    }
-
-    .poll-bar-container {
-      background-color: #000;
-      height: 15px;
-      border: 1px solid #00ffff;
-      margin-top: 2px;
-    }
-
-    .poll-bar {
-      height: 100%;
-      background: linear-gradient(to right, #ff00ff, #00ffff);
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      color: #fff;
-      font-size: 10px;
-      padding-right: 5px;
-    }
-
-    .yearbook {
-      margin: 15px 0;
-      border: 1px solid #00ffff;
-      padding: 10px;
-      background-color: rgba(0, 0, 51, 0.5);
-    }
-
-    .yearbook-entry {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #fff;
-      color: #000;
-      font-family: "Comic Sans MS", cursive;
-      transform: rotate(-2deg);
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    }
-
-    .yearbook-entry:nth-child(even) {
-      transform: rotate(1deg);
-      background-color: #ffffcc;
-    }
-
-    .disclaimer {
-      font-size: 8px;
-      text-align: center;
-      margin-top: 10px;
-      color: #aaa;
-      line-height: 1.2;
-    }
-
-    .random-dolphin {
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      background-color: #00ffff;
-      clip-path: path('M25,0 C30,10 50,15 45,25 C50,35 30,40 25,50 C20,40 0,35 5,25 C0,15 20,10 25,0 Z');
-      z-index: 9999;
-      pointer-events: none;
-      animation: float 3s infinite;
-    }
-
-    .toolbar {
-      background-color: #c0c0c0;
-      display: flex;
-      align-items: center;
-      height: 30px;
-      border-bottom: 1px solid #888;
-      padding: 0 10px;
-    }
-
-    .toolbar-button {
-      background-color: #c0c0c0;
-      border: 1px solid;
-      border-color: #fff #000 #000 #fff;
-      height: 22px;
-      padding: 0 5px;
-      margin: 0 2px;
-      display: flex;
-      align-items: center;
-      font-family: "MS Sans Serif", Arial, sans-serif;
-      font-size: 11px;
-    }
-
-    .spinning-element {
-      display: inline-block;
-      animation: rotate 2s linear infinite;
-    }
-
+    /* Counter styling fix */
     .hit-counter-3d {
       display: flex;
       justify-content: center;
       margin: 10px 0;
     }
-
+    
     .counter-digit-3d {
       width: 20px;
       height: 30px;
@@ -1352,7 +935,7 @@
       overflow: hidden;
       box-shadow: 0 0 5px #ff00ff;
     }
-
+    
     .counter-digit-3d::before {
       content: "";
       position: absolute;
@@ -1361,6 +944,118 @@
       width: 100%;
       height: 50%;
       background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    }
+
+    /* Fix chat box for sidebar */
+    .chat-box {
+      width: 100%;
+      border: 1px solid #ff00ff;
+      margin: 15px 0;
+      background-color: rgba(0, 0, 51, 0.7);
+      box-sizing: border-box;
+    }
+    
+    .chat-title {
+      background: linear-gradient(to right, #000080, #1084d0);
+      color: white;
+      padding: 3px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    .chat-messages {
+      height: 100px;
+      overflow-y: auto;
+      padding: 5px;
+      background-color: #000;
+      color: #00ffff;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+    }
+    
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ff00ff;
+      padding: 5px;
+    }
+    
+    .chat-text {
+      flex-grow: 1;
+      background-color: #000;
+      border: 1px solid #00ffff;
+      color: #00ffff;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    
+    .chat-send {
+      background-color: #c0c0c0;
+      border: 2px solid;
+      border-color: #dfdfdf #000 #000 #dfdfdf;
+      padding: 2px 5px;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    /* Fix poll section */
+    .poll-section {
+      margin: 15px 0;
+      border: 1px solid #ff00ff;
+      padding: 10px;
+      background-color: rgba(0, 0, 51, 0.5);
+      box-sizing: border-box;
+    }
+    
+    .poll-question {
+      color: #00ffff;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .poll-option {
+      margin: 5px 0;
+      color: #ffcc00;
+    }
+    
+    .poll-bar-container {
+      background-color: #000;
+      height: 15px;
+      border: 1px solid #00ffff;
+      margin-top: 2px;
+    }
+    
+    .poll-bar {
+      height: 100%;
+      background: linear-gradient(to right, #ff00ff, #00ffff);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: #fff;
+      font-size: 10px;
+      padding-right: 5px;
+    }
+
+    .cursor-trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.7;
+      z-index: 9999;
+    }
+
+    .random-dolphin {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      background-color: #00ffff;
+      clip-path: path('M25,0 C30,10 50,15 45,25 C50,35 30,40 25,50 C20,40 0,35 5,25 C0,15 20,10 25,0 Z');
+      z-index: 9999;
+      pointer-events: none;
+      animation: float 3s infinite;
     }
 
     .construction-gif {
@@ -1391,6 +1086,14 @@
       0% { left: 0; }
       100% { left: calc(100% - 20px); }
     }
+
+    .rotating-text {
+      font-size: 18px;
+      color: #ffcc00;
+      display: inline-block;
+      animation: rotate 10s linear infinite;
+      transform-origin: center;
+    }
   </style>
 </head>
 <body>
@@ -1418,7 +1121,7 @@
     
     <div class="marquee">
       <span class="blink">★</span> Welcome to my homepage! <span class="blink">★</span> Please sign my guestbook! <span class="blink">★</span> 
-      </div>
+    </div>
       
     <div class="navigation">
       <a href="#home">Home</a>
@@ -1455,49 +1158,12 @@
           <span style="color: lime; font-size: 18px;">T</span>hanks for visiting my little corner of the <span class="rotating-text">internet!</span> This page is dedicated to my professional development and all things <span style="letter-spacing: 5px;">ａｅｓｔｈｅｔｉｃ</span>.
         </p>
         
-        <div class="error-popup" style="top: 30%; left: 70%;">
-          <div class="error-icon">!</div>
-          <div style="text-align: center; margin-bottom: 10px;">
-            Welcome to my website! Don't forget to sign my guestbook!
-          </div>
-          <div class="popup-button">OK</div>
-        </div>
-        
-        <div class="neon-text">✧･ﾟ: *FUN IMAGES* :･ﾟ✧</div>
-        
-        <div class="vaporwave-elements">
-          <div class="vapor-element">
-            <div class="palm-tree">
-              <div class="palm-trunk"></div>
-              <div class="palm-leaves">
-                <div class="palm-leaf leaf1"></div>
-                <div class="palm-leaf leaf2"></div>
-                <div class="palm-leaf leaf3"></div>
-                <div class="palm-leaf leaf4"></div>
-              </div>
-            </div>
-            <div style="color: #00ffff; margin-top: 5px;">𝚙𝚊𝚕𝚖</div>
-          </div>
-          
-          <div class="vapor-element">
-            <div class="statue"></div>
-            <div style="color: #00ffff; margin-top: 5px;">𝚜𝚝𝚊𝚝𝚞𝚎</div>
-          </div>
-          
-          <div class="vapor-element">
-            <div class="grid-element">
-              <div class="grid-lines"></div>
-            </div>
-            <div style="color: #00ffff; margin-top: 5px;">𝚐𝚛𝚒𝚍</div>
-          </div>
-        </div>
-        
         <h2 id="about" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">𝓐𝓫𝓸𝓾𝓽 𝓜𝓮</h2>
         
         <table class="about">
           <tr>
             <td width="30%"><strong>Name:</strong></td>
-            <td>XxRorySxX</td</td>
+            <td>XxRorySxX</td>
           </tr>
           <tr>
             <td><strong>Age:</strong></td>
@@ -1518,16 +1184,17 @@
         </table>
 
         <div class="retro-computer">
-        <div class="computer-screen" style="width: 420px; height: 200px;">
-          <div class="screen-content">
-            C:\> DOWNLOAD john_prescott_dataset_for_fine_tuning.zip<br> 
-            C:\> RUN brandom_a_spirit_of_trust.exe<br>
-            C:\> DIR /W<br>
-            KANT.SYS  AOL2000.ISO  WITT~1.TXT  NAGEL.BAT<br>
-            <span class="blink">_</span>
+          <div class="computer-screen" style="width: 420px; height: 200px;">
+            <div class="screen-content">
+              C:\> DOWNLOAD john_prescott_dataset_for_fine_tuning.zip<br> 
+              C:\> RUN brandom_a_spirit_of_trust.exe<br>
+              C:\> DIR /W<br>
+              KANT.SYS  AOL2000.ISO  WITT~1.TXT  NAGEL.BAT<br>
+              <span class="blink">_</span>
+            </div>
           </div>
+          <div class="computer-keyboard"></div>
         </div>
-        <div class="computer-keyboard"></div>
         
         <div class="win95-window">
           <div class="win95-title">
@@ -1561,24 +1228,6 @@
           </div>
         </div>
         
-        <div class="frames-wrapper">
-          <div class="left-frame">
-            <div style="color: #ff00ff; font-weight: bold; text-align: center; margin-bottom: 10px;">Navigation Frame</div>
-            <div style="color: #00ffff; margin: 5px 0;">► Home</div>
-            <div style="color: #00ffff; margin: 5px 0;">► Guestbook</div>
-            <div style="color: #00ffff; margin: 5px 0;">► My Angelfire</div>
-            <div style="color: #00ffff; margin: 5px 0;">► My GeoCities</div>
-            <div style="color: #00ffff; margin: 5px 0;">► WinAmp Skins</div>
-          </div>
-          <div class="right-frame">
-            <div style="color: #ff00ff; font-weight: bold; text-align: center; margin-bottom: 10px;">Content Frame</div>
-            <div style="color: #00ffff; text-align: center;">
-              This is an <span class="blink">unnecessary</span> nested frame!<br><br>
-              Web design is my <span style="color: #ffcc00;">passion</span>!
-            </div>
-          </div>
-        </div>
-        
         <h2 id="blog" style="color: #00ffff; text-shadow: 2px 2px #ff00ff;">My NetLogs</h2>
         
         <div class="blog-section">
@@ -1603,14 +1252,6 @@
             <div class="post-date">Posted: 02/28/2025</div>
             <div class="post-content">
               So I just found this amazing album called "Digital Plaza 95" by SynthDreams420. The slowed-down samples are totally <span style="letter-spacing: 3px;">ａｅｓｔｈｅｔｉｃ</span> and bring me back to the mall in 1995. It pairs perfectly with Windows 95 startup sounds slowed down 800%. Check it out if you're into that nostalgic feel! I recorded it onto a cassette tape so I can listen in my Walkman while rollerblading at the abandoned mall.
-            </div>
-          </div>
-          
-          <div class="blog-post">
-            <div class="post-title">My Windows 98 Setup</div>
-            <div class="post-date">Posted: 02/15/2025</div>
-            <div class="post-content">
-              Just got my old Pentium II computer running with Windows 98 again! I've installed ICQ, WinAmp, and all the classics. It's so satisfying to hear that dial-up connection sound again, even though I'm not actually using dial-up anymore lol. Next step is to install some vintage games! My buddy is letting me borrow his CD-ROM of Myst next week. Going to print some cheat codes from GameFAQs before he comes over.
             </div>
           </div>
         </div>
@@ -1638,10 +1279,6 @@
             <div class="polaroid-img">IMAGE 5</div>
             <div class="polaroid-caption">John Prescott</div>
           </div>
-          <div class="polaroid">
-            <div class="polaroid-img">IMAGE 6</div>
-            <div class="polaroid-caption">My AOL CD Collection</div>
-          </div>
         </div>
         
         <div class="midi-player">
@@ -1660,62 +1297,39 @@
             <span class="blink">WARNING:</span> MIDI sounds may cause extreme nostalgia and/or spontaneous dance moves
           </div>
         </div>
+
+        <div class="neon-text">✧･ﾟ: *FUN IMAGES* :･ﾟ✧</div>
         
-        <div class="visitor-survey">
-          <h3 style="color: #ff00ff; text-align: center; margin-bottom: 15px;">VISITOR SURVEY</h3>
-          
-          <div class="survey-question">How did you find my site?</div>
-          <div class="survey-options">
-            <select style="width: 100%;">
-              <option>AltaVista Search</option>
-              <option>Web Ring</option>
-              <option>AOL Keywords</option>
-              <option>Printed in TV Guide</option>
-              <option>Time Travel</option>
-              <option>John Prescott told me</option>
-            </select>
+        <div class="vaporwave-elements">
+          <div class="vapor-element">
+            <div class="palm-tree">
+              <div class="palm-trunk"></div>
+              <div class="palm-leaves">
+                <div class="palm-leaf leaf1"></div>
+                <div class="palm-leaf leaf2"></div>
+                <div class="palm-leaf leaf3"></div>
+                <div class="palm-leaf leaf4"></div>
+              </div>
+            </div>
+            <div style="color: #00ffff; margin-top: 5px;">𝚙𝚊𝚕𝚖</div>
           </div>
           
-          <div class="survey-question">What's your favorite defunct technology?</div>
-          <div class="survey-options">
-            <div><input type="radio" name="tech"> Betamax</div>
-            <div><input type="radio" name="tech"> 8-Track</div>
-            <div><input type="radio" name="tech"> HD-DVD</div>
-            <div><input type="radio" name="tech"> Google+</div>
-            <div><input type="radio" name="tech"> MySpace</div>
+          <div class="vapor-element">
+            <div class="statue"></div>
+            <div style="color: #00ffff; margin-top: 5px;">𝚜𝚝𝚊𝚝𝚞𝚎</div>
           </div>
           
-          <div class="survey-question">How many AOL CDs do you own?</div>
-          <div class="survey-options">
-            <input type="text" value="Enter number here" style="width: 100%;">
-          </div>
-          
-          <div class="survey-question">What color was your first computer?</div>
-          <div class="survey-options">
-            <div><input type="radio" name="color"> Beige</div>
-            <div><input type="radio" name="color"> Off-white</div>
-            <div><input type="radio" name="color"> Yellowed-white</div>
-            <div><input type="radio" name="color"> Nicotine-stained beige</div>
-          </div>
-          
-          <div class="survey-question">Rate my website:</div>
-          <div class="survey-options">
-            <select style="width: 100%;">
-              <option>⭐️⭐️⭐️⭐️⭐️ - Would visit on a 56k modem again</option>
-              <option>⭐️⭐️⭐️⭐️ - Almost crashed my Netscape Navigator</option>
-              <option>⭐️⭐️⭐️ - Not enough marquee tags</option>
-              <option>⭐️⭐️ - Didn't ask me to sign your guestbook enough times</option>
-              <option>⭐️ - Loaded too quickly</option>
-            </select>
-          </div>
-          
-          <div style="text-align: center; margin-top: 15px;">
-            <button class="old-school-button">Submit</button>
-            <button class="old-school-button">Reset</button>
+          <div class="vapor-element">
+            <div class="grid-element">
+              <div class="grid-lines"></div>
+            </div>
+            <div style="color: #00ffff; margin-top: 5px;">𝚐𝚛𝚒𝚍</div>
           </div>
         </div>
+      </div>
       
       <div class="sidebar">
+        <!-- Visitor Counter -->
         <div class="counter">
           <div><strong>Visitors:</strong></div>
           <div class="hit-counter-3d">
@@ -1724,36 +1338,38 @@
             <div class="counter-digit-3d">0</div>
             <div class="counter-digit-3d">0</div>
             <div class="counter-digit-3d">1</div>
-            <div class="counter-digit-3d">2</div>
+            <div class="counter-digit-3d">3</div>
           </div>
           <div style="font-size: 10px; margin-top: 3px;">since 3/3/2025 (verified by AltaVista)</div>
         </div>
         
+        <!-- Button -->
         <div style="text-align: center; margin: 15px 0;">
           <button class="old-school-button" onclick="showDialog()">Click Me! <span class="blink">(NOT A VIRUS)</span></button>
         </div>
         
+        <!-- Poll Section -->
         <div class="poll-section">
           <div class="poll-question">THIS WEEK'S POLL</div>
-          <div style="margin-bottom: 10px; color: #ffcc00; text-align: center;">Question?</div>
+          <div style="margin-bottom: 10px; color: #ffcc00; text-align: center;">Is Vaporwave still relevant?</div>
           
-          <div class="poll-option">Answer</div>
+          <div class="poll-option">Absolutely!</div>
           <div class="poll-bar-container">
-            <div class="poll-bar" style="width: 45%;">45%</div>
+            <div class="poll-bar" style="width: 75%;">75%</div>
           </div>
           
-          <div class="poll-option">MySpace dancing GIFs</div>
+          <div class="poll-option">It never was</div>
           <div class="poll-bar-container">
-            <div class="poll-bar" style="width: 30%;">30%</div>
+            <div class="poll-bar" style="width: 15%;">15%</div>
           </div>
           
-          <div class="poll-option">Answer</div>
+          <div class="poll-option">What's Vaporwave?</div>
           <div class="poll-bar-container">
-            <div class="poll-bar" style="width: 25%;">25%</div>
+            <div class="poll-bar" style="width: 10%;">10%</div>
           </div>
           
           <div style="color: #00ffff; font-size: 12px; margin-top: 10px; text-align: center;">
-            Total votes: 4
+            Total votes: 20
           </div>
           
           <div style="text-align: center; margin-top: 10px;">
@@ -1761,6 +1377,7 @@
           </div>
         </div>
         
+        <!-- Chat Box -->
         <div class="chat-box">
           <div class="chat-title">Chat Box (0 Users Online)</div>
           <div class="chat-messages">
@@ -1779,6 +1396,7 @@
           </div>
         </div>
         
+        <!-- Cool Links -->
         <div class="cool-links">
           <h3 id="links">Cool Links</h3>
           <ul>
@@ -1794,34 +1412,10 @@
             <li><a href="#">Y3K Preparation Tips</a></li>
             <li><a href="#">John Prescott Tribute</a></li>
             <li><a href="#">WinAmp Skin Gallery</a></li>
-            <li><a href="#">Keyboard Cat Fanpage</a></li>
           </ul>
         </div>
         
-        <div class="yearbook">
-          <h3 style="text-align: center; color: #00ffff;">Sign My Digital Yearbook!</h3>
-          
-          <div class="yearbook-entry">
-            <div class="entry-text">Stay cool, never change! Have a great summer! -CyberDude94</div>
-          </div>
-          
-          <div class="yearbook-entry">
-            <div class="entry-text">2 kool 2 b 4gotten!! call me on ICQ -sk8tergirl</div>
-          </div>
-          
-          <div class="yearbook-entry">
-            <div class="entry-text">Remember that time we crashed the school server? ROFL -h4ck3rm4n</div>
-          </div>
-          
-          <div class="yearbook-entry">
-            <div class="entry-text">FIRST! -xXx_1337_G4M3R_xXx</div>
-          </div>
-          
-          <div style="text-align: center; margin-top: 10px;">
-            <button class="old-school-button">Add your signature!</button>
-          </div>
-        </div>
-        
+        <!-- Guestbook -->
         <div class="guestbook">
           <h3 id="guestbook" style="text-align: center; color: #00ffff;">Sign My Guestbook!</h3>
           <form style="text-align: center;">
@@ -1875,43 +1469,13 @@
                 Hey, did you hear about John Prescott? RIP
               </div>
             </div>
-            
-            <div class="guestbook-entry">
-              <div class="entry-header">
-                <span class="entry-name">AOL_CD_Collector</span>
-                <span class="entry-date">03/01/2025</span>
-              </div>
-              <div class="entry-message">
-                Do you have version 7.2 of AOL? I'll trade you for my Encarta '95!
-              </div>
-            </div>
-            
-            <div class="guestbook-entry">
-              <div class="entry-header">
-                <span class="entry-name">Y3K_Prepper</span>
-                <span class="entry-date">02/28/2025</span>
-              </div>
-              <div class="entry-message">
-                Just 975 years until Y3K! Are you ready? I've started stockpiling floppy disks.
-              </div>
-            </div>
-            
-            <div class="guestbook-entry">
-              <div class="entry-header">
-                <span class="entry-name">XxJohnPrescottOfficialxX</span>
-                <span class="entry-date">01/01/1999</span>
-              </div>
-              <div class="entry-message">
-                This is not the real John Prescott but I wish it was. Great site!
-              </div>
-            </div>
           </div>
         </div>
         
         <div style="text-align: center; margin: 15px 0;">
           <div style="color: yellow; margin-bottom: 5px;">My Mood:</div>
-          <div style="font-size: 40px;">
-            ✧･ﾟ: *✧･ﾟ:* A E S T H E T I C *:･ﾟ✧*:･ﾟ✧
+          <div style="font-size: 20px;">
+            ✧･ﾟ: *A E S T H E T I C* :･ﾟ✧
           </div>
         </div>
         
@@ -1921,12 +1485,6 @@
             リサフランク420 / 現代のコンピュー ♫ ♫ ♫ 猫 シ Corp - NEWS AT 11 ♫ ♫ ♫
           </marquee>
         </div>
-        
-        <div style="margin: 15px 0; border: 1px dashed #ff00ff; padding: 5px; text-align: center;">
-          <div style="color: #ffcc00;">Weather in Vaporwave Plaza:</div>
-          <div style="font-size: 20px; color: #00ffff; margin-top: 5px;">☀️ 87° F / Synthwave Humidity 100%</div>
-        </div>
-        
       </div>
     </div>
     
@@ -1950,23 +1508,6 @@
       <div style="color: #ffcc00; margin: 5px 0;">
         <span style="color: #ff00ff;">Geocities:</span> geocities.com/TimesSquare/Arcade/4237/
       </div>
-      <div style="color: #ffcc00; margin: 5px 0;">
-        <span style="color: #ff00ff;">Fax:</span> 1-800-VAPOR-WAVE
-      </div>
-      <div style="color: #ffcc00; margin: 5px 0;">
-        <span style="color: #ff00ff;">Pager:</span> Beep me at 867-5309
-      </div>
-    </div>
-    
-    <div class="startbar">
-      <div class="start-button">
-        <div class="start-icon"></div>
-        Start
-      </div>
-      <div class="taskbar-item">Netscape Navigator</div>
-      <div class="taskbar-item">WinAmp (Playing: macintosh_plus.midi)</div>
-      <div class="taskbar-item">Y3K Countdown.exe</div>
-      <div class="clock-area">4:20 PM</div>
     </div>
     
     <div class="footer">
@@ -2046,4 +1587,15 @@
       trail.style.top = e.pageY + 'px';
       
       // Random color from vaporwave palette
-      const colors = ['#ff00ff', '#00ffff', '#ffcc00', '#
+      const colors = ['#ff00ff', '#00ffff', '#ffcc00', '#ff6600', '#9900ff'];
+      trail.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      document.body.appendChild(trail);
+      
+      setTimeout(() => {
+        trail.remove();
+      }, 800);
+    });
+  </script>
+</body>
+</html>
