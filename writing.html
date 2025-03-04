@@ -676,18 +676,13 @@
         </div>
         
         <!-- Mood text (static) -->
-        <div style="text-align: center; margin: 15px 0;">
-          <div style="color: yellow; margin-bottom: 5px;">My Mood:</div>
-          <div style="font-size: 20px;">
+        <div style="margin: 15px 0; text-align: center;">
+          <div style="color: #00ffff; margin-bottom: 5px;">Mood:</div>
+          <marquee scrollamount="2" direction="left" width="100%">
             ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧
-          </div>
+          </marquee>
         </div>
       </div>
-    </div>
-    
-    <!-- Moving mood at the bottom -->
-    <div class="mood-marquee">
-      My Mood: ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧ My Mood: ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧ My Mood: ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧ My Mood: ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧
     </div>
     
     <div id="contact" style="text-align: center; padding: 10px; margin: 15px;">
@@ -734,25 +729,6 @@
       </div>
   </div>
 
-  <div class="windows-dialog" id="popup">
-    <div class="windows-title-bar">
-      <div>Welcome! (1 of 17)</div>
-      <div class="windows-close" onclick="closeDialog()">x</div>
-    </div>
-    <div class="windows-content">
-      Thanks for visiting my writings!<br>
-      My favorite blog topics include: AI, epistemology, and John Prescott.<br>
-      <img src="/api/placeholder/32/32" alt="waving hand" />
-      <div style="margin-top: 10px; font-size: 10px; color: #666;">
-        This popup is Y3K compliant.
-      </div>
-    </div>
-    <div class="windows-buttons">
-      <div class="popup-button" onclick="closeDialog()">OK</div>
-      <div class="popup-button">Remind me later</div>
-    </div>
-  </div>
-
   <script>
     // Simple animation for the hit counter
     setTimeout(() => {
@@ -772,9 +748,6 @@
         showDialog();
       }, 10000);
     }
-    
-    // Auto show popup after 5 seconds
-    setTimeout(showDialog, 5000);
     
     // Create cursor trails (will only work when JavaScript is enabled)
     document.addEventListener('mousemove', function(e) {
