@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>~*~* Writing *~*~</title>
+  <style>
+    body {
+      background-color: #000033;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 0h50v50H0zm50 50h50v50H50z' fill='%23ff00ff' fill-opacity='0.05'/%3E%3C/svg%3E");
+      color: #ff00ff;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      margin: 0;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23ff00ff' fill-opacity='0.7'/%3E%3Ccircle cx='12' cy='12' r='6' fill='%2300ffff' fill-opacity='0.7'/%3E%3C/svg%3E"), auto;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      width: 780px;
+      margin: 0 auto;
+      border: 4px solid #00ffff;
+      background-color: rgba(0, 0, 51, 0.7);
+      box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+    }
+    
+    .header {
+      text-align: center;
+      background: linear-gradient(to right, #ff00ff, #00ffff);
+      padding: 10px;
+      border-bottom: 3px dashed white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 0 L50 50 L100 0 L50 -50 Z' fill='white' fill-opacity='0.1'/%3E%3C/svg%3E");
+      background-size: 40px 40px;
+      z-index: 0;
+    }
+    
+    .header h1 {
+      color: white;
+      text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff;
+      font-size: 36px;
+      margin: 10px 0;
+      animation: rainbow 3s infinite;
+      position: relative;
+      z-index: 1;
+      transform: rotate(-1deg);
+    }
+    
+    .motto {
+      font-style: italic;
+      color: yellow;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px black;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 2px;
+    }
+    
+    .navigation {
+      background-color: #000066;
+      text-align: center;
+      padding: 5px;
+      border-top: 2px solid #00ffff;
+      border-bottom: 2px solid #00ffff;
+      margin-bottom: 5px;
+    }
+    
+    .navigation a {
+      display: inline-block;
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 3px 10px;
+      border: 1px solid #ff00ff;
+      background-color: #000033;
+    }
+    
+    .navigation a:hover {
+      background-color: #ff00ff;
+      color: white;
+      transform: rotate(-2deg);
+    }
+    
+    /* Fixed main layout */
+    .main {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+    
+    .content {
+      display: table-cell;
+      padding: 15px;
+      width: 70%;
+      vertical-align: top;
+    }
+    
+    .sidebar {
+      display: table-cell;
+      width: 30%;
+      background-color: rgba(0, 0, 102, 0.5);
+      border-left: 2px dashed #00ffff;
+      padding: 10px;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+    
+    .welcome {
+      font-size: 24px;
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0 #ff00ff;
+      animation: pulse 2s infinite;
+    }
+    
+    .under-construction {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+      border: 2px dashed yellow;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .under-construction img {
+      animation: rotate 3s infinite linear;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      margin: 0 10px;
+    }
+    
+    /* Blog post styling */
+    .blog-intro {
+      color: #ffcc00;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px dashed #00ffff;
+      background-color: rgba(0, 0, 153, 0.3);
+    }
+    
+    .blog-section {
+      margin: 30px 0;
+    }
+    
+    .blog-section-title {
+      font-size: 22px;
+      color: #00ffff;
+      text-shadow: 2px 2px 0 #ff00ff;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #ff00ff;
+      margin-bottom: 15px;
+    }
+    
+    .blog-post {
+      margin: 15px 0;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .blog-post:hover {
+      background-color: rgba(255, 0, 255, 0.1);
+      transform: translateX(5px);
+    }
+    
+    .blog-date {
+      display: inline-block;
+      width: 120px;
+      color: #ff00ff;
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+      vertical-align: top;
+    }
+    
+    .blog-title {
+      display: inline-block;
+      width: calc(100% - 130px);
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      vertical-align: top;
+    }
+    
+    .blog-title:hover {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+    
+    .counter {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    
+    .counter-number {
+      background-color: black;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      padding: 3px 6px;
+      border: 1px solid #00ffff;
+      letter-spacing: 2px;
+    }
+    
+    .guestbook {
+      margin: 20px 0;
+      border: 1px dotted #00ffff;
+      padding: 10px;
+      background-color: rgba(0, 0, 51, 0.5);
+    }
+    
+    .webring {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+      border-top: 1px solid #ff00ff;
+      border-bottom: 1px solid #ff00ff;
+    }
+    
+    .webring img {
+      margin: 0 5px;
+      border: 1px solid white;
+      background-color: #ff00ff;
+      width: 88px;
+      height: 31px;
+    }
+    
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      border-top: 3px dashed #00ffff;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+    
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+      padding: 5px;
+      background-color: black;
+      border: 1px solid #00ffff;
+      margin: 10px 0;
+      color: #00ff00;
+    }
+    
+    .hit-counter-3d {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    
+    .counter-digit-3d {
+      width: 20px;
+      height: 30px;
+      background-color: #000;
+      color: #00ff00;
+      border: 1px solid #00ffff;
+      font-family: "Digital", "Courier New", monospace;
+      font-weight: bold;
+      font-size: 24px;
+      margin: 0 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 5px #ff00ff;
+    }
+    
+    .counter-digit-3d::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    }
+
+    /* Chat box for sidebar */
+    .chat-box {
+      width: 100%;
+      border: 1px solid #ff00ff;
+      margin: 15px 0;
+      background-color: rgba(0, 0, 51, 0.7);
+      box-sizing: border-box;
+    }
+    
+    .chat-title {
+      background: linear-gradient(to right, #000080, #1084d0);
+      color: white;
+      padding: 3px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    .chat-messages {
+      height: 100px;
+      overflow-y: auto;
+      padding: 5px;
+      background-color: #000;
+      color: #00ffff;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+    }
+    
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ff00ff;
+      padding: 5px;
+    }
+    
+    .chat-text {
+      flex-grow: 1;
+      background-color: #000;
+      border: 1px solid #00ffff;
+      color: #00ffff;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    
+    .chat-send {
+      background-color: #c0c0c0;
+      border: 2px solid;
+      border-color: #dfdfdf #000 #000 #dfdfdf;
+      padding: 2px 5px;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    /* Poll section */
+    .poll-section {
+      margin: 15px 0;
+      border: 1px solid #ff00ff;
+      padding: 10px;
+      background-color: rgba(0, 0, 51, 0.5);
+      box-sizing: border-box;
+    }
+    
+    .poll-question {
+      color: #00ffff;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .poll-option {
+      margin: 5px 0;
+      color: #ffcc00;
+    }
+    
+    .poll-bar-container {
+      background-color: #000;
+      height: 15px;
+      border: 1px solid #00ffff;
+      margin-top: 2px;
+    }
+    
+    .poll-bar {
+      height: 100%;
+      background: linear-gradient(to right, #ff00ff, #00ffff);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: #fff;
+      font-size: 10px;
+      padding-right: 5px;
+    }
+
+    .cursor-trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0.7;
+      z-index: 9999;
+    }
+
+    .random-dolphin {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      background-color: #00ffff;
+      clip-path: path('M25,0 C30,10 50,15 45,25 C50,35 30,40 25,50 C20,40 0,35 5,25 C0,15 20,10 25,0 Z');
+      z-index: 9999;
+      pointer-events: none;
+      animation: float 3s infinite;
+    }
+
+    .construction-gif {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fake-construction {
+      width: 100px;
+      height: 30px;
+      background-color: yellow;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .worker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      border-radius: 50%;
+      top: 5px;
+      animation: worker-move 3s linear infinite;
+    }
+
+    @keyframes worker-move {
+      0% { left: 0; }
+      100% { left: calc(100% - 20px); }
+    }
+
+    .rotating-text {
+      font-size: 18px;
+      color: #ffcc00;
+      display: inline-block;
+      animation: rotate 10s linear infinite;
+      transform-origin: center;
+    }
+    
+    .cool-links {
+      margin: 15px 0;
+    }
+    
+    .cool-links h3 {
+      color: #00ffff;
+      text-shadow: 1px 1px #ff00ff;
+      text-align: center;
+      border-bottom: 1px dotted #ff00ff;
+    }
+    
+    .cool-links ul {
+      list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='4' fill='%23ff00ff'/%3E%3C/svg%3E");
+      padding-left: 25px;
+    }
+    
+    .cool-links a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    
+    .cool-links a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+    
+    .old-school-button {
+      display: inline-block;
+      padding: 5px 10px;
+      background: linear-gradient(to bottom, #fff, #ccc);
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #888;
+      border-bottom: 2px solid #888;
+      color: #000;
+      text-decoration: none;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      margin: 5px;
+    }
+    
+    .old-school-button:active {
+      border-top: 2px solid #888;
+      border-left: 2px solid #888;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
+    
+    .windows-dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #c0c0c0;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      width: 300px;
+      color: black;
+      font-family: "MS Sans Serif", Arial, sans-serif;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+      display: none;
+    }
+    
+    .windows-title-bar {
+      background: linear-gradient(to right, #000080, #1084d0);
+      color: white;
+      padding: 3px 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .windows-close {
+      background: #c0c0c0;
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      color: black;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      cursor: pointer;
+    }
+    
+    .windows-content {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .windows-buttons {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    
+    .popup-button {
+      margin: 0 5px;
+      padding: 3px 10px;
+      background: #c0c0c0;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      cursor: pointer;
+    }
+    
+    /* The missing keyframes animation definitions */
+    @keyframes rainbow {
+      0% { color: #ff00ff; }
+      20% { color: #ff0000; }
+      40% { color: #ffff00; }
+      60% { color: #00ff00; }
+      80% { color: #00ffff; }
+      100% { color: #ff00ff; }
+    }
+    
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    
+    @keyframes marquee {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Random floating dolphin -->
+  <div class="random-dolphin" style="top: 25%; left: 80%;"></div>
+  <div class="random-dolphin" style="top: 70%; left: 15%; animation-delay: 1.5s;"></div>
+  
+  <div class="container">
+    <div class="header">
+      <h1>~*~ T H E  R O R Y  Z O N E ~*~</h1>
+      <div class="motto">// ｅ ｓ ｔ.  １ ９ ９ ８  //</div>
+    </div>
+    
+    <div class="marquee">
+      <span class="blink">★</span> Welcome to my blog! <span class="blink">★</span> AI, epistemology, and other intriguing topics! <span class="blink">★</span> New post: Thoughts on Reasoning Models <span class="blink">★</span>
+    </div>
+      
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="blog.html">My Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="links.html">Cool Links</a>
+      <a href="guestbook.html">Guestbook</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="main">
+      <div class="content">
+        <!-- BLOG CONTENT -->
+        <div class="welcome">
+          <span>★</span> MY WRITING <span>★</span>
+        </div>
+        
+        <div class="blog-intro">
+          Personal writing, featuring a grab bag of AI, applied epistemology, and other things that take my interest.
+        </div>
+        
+        <div class="blog-section">
+          <div class="blog-section-title">✧･ﾟ this year ･ﾟ✧</div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2025-03-08</span>
+            <a href="posts/thoughts-on-reasoning-models.html" class="blog-title">Thoughts on Reasoning Models</a>
+          </div>
+        </div>
+        
+        <div class="blog-section">
+          <div class="blog-section-title">✧･ﾟ earlier ･ﾟ✧</div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2024-12-12</span>
+            <a href="posts/two-tales-of-ai-takeover.html" class="blog-title">Two Tales of AI Takeover</a>
+          </div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2024-06-09</span>
+            <a href="posts/alignment-goals-and-the-gut-head-gap.html" class="blog-title">Alignment, Goals, and The Gut-Head Gap</a>
+          </div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2024-05-05</span>
+            <a href="posts/therapy-for-edgelords.html" class="blog-title">Therapy for Edgelords</a>
+          </div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2024-03-20</span>
+            <a href="posts/probabilities-prioritization-and-bayesian-mindset.html" class="blog-title">Probabilities, Prioritization, and Bayesian Mindset</a>
+          </div>
+          
+          <div class="blog-post">
+            <span class="blog-date">2023-10-20</span>
+            <a href="posts/effective-altruisms-implicit-epistemology.html" class="blog-title">Effective Altruism's Implicit Epistemology</a>
+          </div>
+        </div>
+        
+        <div class="under-construction">
+          <div class="construction-gif">
+            <div class="fake-construction">
+              <div class="worker"></div>
+            </div>
+          </div>
+          <span style="color: yellow; font-weight: bold; font-size: 20px;">MORE POSTS COMING SOON</span>
+          <div class="construction-gif">
+            <div class="fake-construction">
+              <div class="worker"></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- SIDEBAR - KEEP THE SAME AS IN YOUR INDEX.HTML -->
+      <div class="sidebar">
+        <!-- Visitor Counter -->
+        <div class="counter">
+          <div><strong>Visitors:</strong></div>
+          <div class="hit-counter-3d">
+            <div class="counter-digit-3d">0</div>
+            <div class="counter-digit-3d">0</div>
+            <div class="counter-digit-3d">0</div>
+            <div class="counter-digit-3d">0</div>
+            <div class="counter-digit-3d">1</div>
+            <div class="counter-digit-3d">3</div>
+          </div>
+          <div style="font-size: 10px; margin-top: 3px;">since 3/3/2025 (verified by AltaVista)</div>
+        </div>
+        
+        <!-- Button -->
+        <div style="text-align: center; margin: 15px 0;">
+          <button class="old-school-button" onclick="showDialog()">Click Me!</button>
+        </div>
+        
+        <!-- Poll Section -->
+        <div class="poll-section">
+          <div class="poll-question">THIS WEEK'S POLL</div>
+          <div style="margin-bottom: 10px; color: #ffcc00; text-align: center;">Best Blog Topic?</div>
+          
+          <div class="poll-option">AI Alignment</div>
+          <div class="poll-bar-container">
+            <div class="poll-bar" style="width: 75%;">75%</div>
+          </div>
+          
+          <div class="poll-option">Epistemology</div>
+          <div class="poll-bar-container">
+            <div class="poll-bar" style="width: 20%;">20%</div>
+          </div>
+          
+          <div class="poll-option">John Prescott</div>
+          <div class="poll-bar-container">
+            <div class="poll-bar" style="width: 105%;">105%</div>
+          </div>
+          
+          <div style="color: #00ffff; font-size: 12px; margin-top: 10px; text-align: center;">
+            Total votes: 42
+          </div>
+          
+          <div style="text-align: center; margin-top: 10px;">
+            <button class="old-school-button">Vote now!</button>
+          </div>
+        </div>
+        
+        <!-- Chat Box -->
+        <div class="chat-box">
+          <div class="chat-title">Chat Box (0 Users Online)</div>
+          <div class="chat-messages">
+            <div>[System]: Welcome to the chat!</div>
+            <div>[XxRory-SxX]: hello? is anyone here??</div>
+            <div>[System]: There are no other users online.</div>
+            <div>[XxRory-SxX]: I'll just wait then...</div>
+            <div>[System]: User JohnPrescott69 has entered the chat.</div>
+            <div>[JohnPrescott69]: ayy lmao</div>
+            <div>[System]: User JohnPrescott69 has left the chat.</div>
+            <div>[XxRory-SxX]: nooooo come back!</div>
+          </div>
+          <div class="chat-input">
+            <input type="text" class="chat-text" value="Type your message...">
+            <button class="chat-send">Send</button>
+          </div>
+        </div>
+        
+        <!-- Cool Links -->
+        <div class="cool-links">
+          <h3 id="links">Cool Links</h3>
+          <ul>
+            <li><a href="http://theviolethour.substack.com/" target="_blank">My Writing</a></li>
+            <li><a href="https://www.google.com/search?q=john+prescott" target="_blank">Politics</a></li>
+            <li><a href="http://bactra.org/notebooks/" target="_blank">bΛctrΛ</a></li>
+            <a href="https://cadence.moe" target="_blank"><img src="https://cadence.moe/static/img/cadence_now.png" alt="The text &quot;cadence now!&quot; on a purple background. There is a moon-shaped logo on the left side and a tiny star in the bottom right." width="88" height="31"></a>
+            <li><a href="#">Web 1.0 Resources</a></li>
+            <li><a href="#">My Friend's Page</a></li>
+            <li><a href="#">WinAmp Skin Gallery</a></li>
+          </ul>
+        </div>
+        
+        <!-- Guestbook -->
+        <div class="guestbook">
+          <h3 id="guestbook" style="text-align: center; color: #00ffff;">Sign My Guestbook!</h3>
+          <form style="text-align: center;">
+            <div style="margin: 5px 0;">
+              <label for="name">Name:</label>
+              <input type="text" id="name" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+            </div>
+            <div style="margin: 5px 0;">
+              <label for="email">Email:</label>
+              <input type="text" id="email" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+            </div>
+            <div style="margin: 5px 0;">
+              <label for="message">Message:</label>
+              <textarea id="message" rows="3" style="width: 100%; background: black; color: #00ffff; border: 1px solid #ff00ff;"></textarea>
+            </div>
+            <div style="margin: 5px 0;">
+              <label for="aolim">AOL IM:</label>
+              <input type="text" id="aolim" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+            </div>
+            <div style="margin: 5px 0;">
+              <label for="icq">ICQ#:</label>
+              <input type="text" id="icq" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
+            </div>
+            <div style="margin: 5px 0;">
+              <label>Do you like John Prescott?</label>
+              <div>
+                <input type="radio" name="prescott" checked> Yes!
+                <input type="radio" name="prescott"> Absolutely!
+              </div>
+            </div>
+            <button type="button" class="old-school-button">Submit</button>
+          </form>
+          
+          <div class="guestbook-entries">
+            <div class="guestbook-entry">
+              <div class="entry-header">
+                <span class="entry-name">AIEnthusiast</span>
+                <span class="entry-date">03/05/2025</span>
+              </div>
+              <div class="entry-message">
+                Your post on reasoning models totally changed my perspective. BTW did you know John Prescott was into AI before it was cool?
+              </div>
+            </div>
+
+            <div class="guestbook-entry">
+              <div class="entry-header">
+                <span class="entry-name">VaporFan2000</span>
+                <span class="entry-date">03/01/2025</span>
+              </div>
+              <div class="entry-message">
+                First!!! Love ur blog. Check out my page at geocities.com/area51/dimension/7275/
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin: 15px 0;">
+          <div style="color: yellow; margin-bottom: 5px;">My Mood:</div>
+          <div style="font-size: 20px;">
+            ✧･ﾟ: *E P I S T E M I C* :･ﾟ✧
+          </div>
+        </div>
+        
+        <div style="margin: 15px 0; text-align: center;">
+          <div style="color: #00ffff; margin-bottom: 5px;">Current Song:</div>
+          <marquee scrollamount="2" direction="left" width="100%">
+            リサフランク420 / 現代のコンピュー ♫ ♫ ♫ 猫 シ Corp - NEWS AT 11 ♫ ♫ ♫
+          </marquee>
+        </div>
+      </div>
+    </div>
+    
+    <div id="contact" style="text-align: center; padding: 10px; margin: 15px;">
+      <h3 style="color: #00ffff; text-shadow: 1px 1px #ff00ff;">Contact Me</h3>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">Email:</span> vaporwave2001@geocities.com
+      </div>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">AIM:</span> VaporKid2001
+      </div>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">ICQ:</span> 12345678
+      </div>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">MSN:</span> vaporwave@hotmail.com
+      </div>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">MySpace:</span> myspace.com/vaporwavekid2001
+      </div>
+      <div style="color: #ffcc00; margin: 5px 0;">
+        <span style="color: #ff00ff;">Geocities:</span> geocities.com/TimesSquare/Arcade/4237/
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div>© 1998-2025. All rights reserved. Y3K READY!</div>
+      <div style="margin-top: 5px;">Made with Microsoft FrontPage 98 • Last updated: 03/03/2025</div>
+      <div style="margin-top: 5px;">
+        <span style="margin: 0 5px;">
+          <a href="#" style="color: white;">Privacy Policy</a>
+        </span>
+        <span style="margin: 0 5px;">|</span>
+        <span style="margin: 0 5px;">
+          <a href="#" style="color: white;">Site Map</a>
+        </span>
+        <span style="margin: 0 5px;">|</span>
+        <span style="margin: 0 5px;">
+          <a href="#" style="color: white;">Best viewed in 800x600</a>
+        </span>
+        <span style="margin: 0 5px;">|</span>
+        <span style="margin: 0 5px;">
+          <a href="#" style="color: white;">This site is John Prescott Approved™</a>
+        </span>
+      </div>
+      
+      <div class="disclaimer">
+        This website is best viewed through a CRT monitor while drinking Surge soda. The creator assumes no responsibility for Y2K-related anxiety, dial-up connection fees, or sudden urges to invest in Beanie Babies. All rights reserved, all wrongs reversed. If you're reading this, congratulations on scrolling to the bottom of the page - you've won a free subscription to my newsletter (delivery via fax only). Page optimized for Netscape Navigator 4.0, Internet Explorer 5.5, and AOL Browser. Not compatible with reality.
+      </div>
+    </div>
+  </div>
+
+  <div class="windows-dialog" id="popup">
+    <div class="windows-title-bar">
+      <div>Welcome! (1 of 17)</div>
+      <div class="windows-close" onclick="closeDialog()">x</div>
+    </div>
+    <div class="windows-content">
+      Thanks for visiting my blog!<br>
+      Have you read my latest post yet?<br>
+      <img src="/api/placeholder/32/32" alt="waving hand" />
+      <div style="margin-top: 10px; font-size: 10px; color: #666;">
+        This popup is Y3K compliant.
+      </div>
+    </div>
+    <div class="windows-buttons">
+      <div class="popup-button" onclick="closeDialog()">OK</div>
+      <div class="popup-button">Remind me later</div>
+    </div>
+  </div>
+
+  <script>
+    // Simple animation for the hit counter
+    setTimeout(() => {
+      const digits = document.querySelectorAll('.counter-digit-3d');
+      digits[5].textContent = '3';
+    }, 3000);
+    
+    // Show popup dialog
+    function showDialog() {
+      document.getElementById('popup').style.display = 'block';
+    }
+    
+    // Close popup dialog
+    function closeDialog() {
+      document.getElementById('popup').style.display = 'none';
+      setTimeout(() => {
+        showDialog();
+      }, 10000);
+    }
+    
+    // Auto show popup after 5 seconds
+    setTimeout(showDialog, 5000);
+    
+    // Create cursor trails (will only work when JavaScript is enabled)
+    document.addEventListener('mousemove', function(e) {
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = e.pageX + 'px';
+      trail.style.top = e.pageY + 'px';
+      
+      // Random color from vaporwave palette
+      const colors = ['#ff00ff', '#00ffff', '#ffcc00', '#ff6600', '#9900ff'];
+      trail.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      document.body.appendChild(trail);
+      
+      setTimeout(() => {
+        trail.remove();
+      }, 800);
+    });
+  </script>
+</body>
+</html>
