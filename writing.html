@@ -397,17 +397,6 @@
       z-index: 9999;
     }
 
-    .random-dolphin {
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      background-color: #00ffff;
-      clip-path: path('M25,0 C30,10 50,15 45,25 C50,35 30,40 25,50 C20,40 0,35 5,25 C0,15 20,10 25,0 Z');
-      z-index: 9999;
-      pointer-events: none;
-      animation: float 3s infinite;
-    }
-
     .construction-gif {
       display: flex;
       align-items: center;
@@ -593,10 +582,7 @@
   </style>
 </head>
 <body>
-  <!-- Random floating dolphin -->
-  <div class="random-dolphin" style="top: 25%; left: 80%;"></div>
-  <div class="random-dolphin" style="top: 70%; left: 15%; animation-delay: 1.5s;"></div>
-  
+
   <div class="container">
     <div class="header">
       <h1>~*~ T H E  R O R Y  Z O N E ~*~</h1>
@@ -643,27 +629,27 @@
           
           <div class="blog-post">
             <span class="blog-date">2024-12-12</span>
-            <a href="posts/two-tales-of-ai-takeover.html" class="blog-title">Two Tales of AI Takeover</a>
+            <a href="https://www.lesswrong.com/posts/GbpH2kFLy5axXpzPn/two-tales-of-ai-takeover-my-doubts-1" class="blog-title">Two Tales of AI Takeover</a>
           </div>
           
           <div class="blog-post">
             <span class="blog-date">2024-06-09</span>
-            <a href="posts/alignment-goals-and-the-gut-head-gap.html" class="blog-title">Alignment, Goals, and The Gut-Head Gap</a>
+            <a href="https://theviolethour.substack.com/p/alignment-goals-and-the-gut-head" class="blog-title">Alignment, Goals, and The Gut-Head Gap</a>
           </div>
           
           <div class="blog-post">
             <span class="blog-date">2024-05-05</span>
-            <a href="posts/therapy-for-edgelords.html" class="blog-title">Therapy for Edgelords</a>
+            <a href="https://theviolethour.substack.com/p/therapy-for-edgelords" class="blog-title">Therapy for Edgelords</a>
           </div>
           
           <div class="blog-post">
             <span class="blog-date">2024-03-20</span>
-            <a href="posts/probabilities-prioritization-and-bayesian-mindset.html" class="blog-title">Probabilities, Prioritization, and Bayesian Mindset</a>
+            <a href="https://forum.effectivealtruism.org/posts/BWLAzZEA5K7HPr2CL/probabilities-prioritization-and-bayesian-mindset" class="blog-title">Probabilities, Prioritization, and Bayesian Mindset</a>
           </div>
           
           <div class="blog-post">
             <span class="blog-date">2023-10-20</span>
-            <a href="posts/effective-altruisms-implicit-epistemology.html" class="blog-title">Effective Altruism's Implicit Epistemology</a>
+            <a href="https://forum.effectivealtruism.org/posts/829tAQAYAntkRxCy2/effective-altruism-s-implicit-epistemology" class="blog-title">Effective Altruism's Implicit Epistemology</a>
           </div>
         </div>
         
@@ -766,63 +752,6 @@
           </ul>
         </div>
         
-        <!-- Guestbook -->
-        <div class="guestbook">
-          <h3 id="guestbook" style="text-align: center; color: #00ffff;">Sign My Guestbook!</h3>
-          <form style="text-align: center;">
-            <div style="margin: 5px 0;">
-              <label for="name">Name:</label>
-              <input type="text" id="name" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
-            </div>
-            <div style="margin: 5px 0;">
-              <label for="email">Email:</label>
-              <input type="text" id="email" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
-            </div>
-            <div style="margin: 5px 0;">
-              <label for="message">Message:</label>
-              <textarea id="message" rows="3" style="width: 100%; background: black; color: #00ffff; border: 1px solid #ff00ff;"></textarea>
-            </div>
-            <div style="margin: 5px 0;">
-              <label for="aolim">AOL IM:</label>
-              <input type="text" id="aolim" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
-            </div>
-            <div style="margin: 5px 0;">
-              <label for="icq">ICQ#:</label>
-              <input type="text" id="icq" style="background: black; color: #00ffff; border: 1px solid #ff00ff;">
-            </div>
-            <div style="margin: 5px 0;">
-              <label>Do you like John Prescott?</label>
-              <div>
-                <input type="radio" name="prescott" checked> Yes!
-                <input type="radio" name="prescott"> Absolutely!
-              </div>
-            </div>
-            <button type="button" class="old-school-button">Submit</button>
-          </form>
-          
-          <div class="guestbook-entries">
-            <div class="guestbook-entry">
-              <div class="entry-header">
-                <span class="entry-name">AIEnthusiast</span>
-                <span class="entry-date">03/05/2025</span>
-              </div>
-              <div class="entry-message">
-                Your post on reasoning models totally changed my perspective. BTW did you know John Prescott was into AI before it was cool?
-              </div>
-            </div>
-
-            <div class="guestbook-entry">
-              <div class="entry-header">
-                <span class="entry-name">VaporFan2000</span>
-                <span class="entry-date">03/01/2025</span>
-              </div>
-              <div class="entry-message">
-                First!!! Love ur blog. Check out my page at geocities.com/area51/dimension/7275/
-              </div>
-            </div>
-          </div>
-        </div>
-        
         <div style="text-align: center; margin: 15px 0;">
           <div style="color: yellow; margin-bottom: 5px;">My Mood:</div>
           <div style="font-size: 20px;">
@@ -882,31 +811,6 @@
         </span>
       </div>
       
-      <div class="disclaimer">
-        This website is best viewed through a CRT monitor while drinking Surge soda. The creator assumes no responsibility for Y2K-related anxiety, dial-up connection fees, or sudden urges to invest in Beanie Babies. All rights reserved, all wrongs reversed. If you're reading this, congratulations on scrolling to the bottom of the page - you've won a free subscription to my newsletter (delivery via fax only). Page optimized for Netscape Navigator 4.0, Internet Explorer 5.5, and AOL Browser. Not compatible with reality.
-      </div>
-    </div>
-  </div>
-
-  <div class="windows-dialog" id="popup">
-    <div class="windows-title-bar">
-      <div>Welcome! (1 of 17)</div>
-      <div class="windows-close" onclick="closeDialog()">x</div>
-    </div>
-    <div class="windows-content">
-      Thanks for visiting my blog!<br>
-      Have you read my latest post yet?<br>
-      <img src="/api/placeholder/32/32" alt="waving hand" />
-      <div style="margin-top: 10px; font-size: 10px; color: #666;">
-        This popup is Y3K compliant.
-      </div>
-    </div>
-    <div class="windows-buttons">
-      <div class="popup-button" onclick="closeDialog()">OK</div>
-      <div class="popup-button">Remind me later</div>
-    </div>
-  </div>
-
   <script>
     // Simple animation for the hit counter
     setTimeout(() => {
